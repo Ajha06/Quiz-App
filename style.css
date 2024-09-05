@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: skyblue;
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 100%);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.quiz-container {
+  background-color: #fff;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 0.625rem 0.125rem rgba(100, 100, 100, 0.1);
+  width: 90%;
+  max-width: 500px;
+  overflow: hidden;
+  position: relative;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.quiz-header {
+  background-color: #8e44ad;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.quiz-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.quiz-content {
+  padding: 1rem;
+}
+
+h2 {
+  padding: 0.5rem;
+  text-align: center;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+ul li label {
+  cursor: pointer;
+}
+
+button {
+  background-color: #8e44ad;
+  color: #fff;
+  border: none;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 0.75rem;
+}
+
+button:hover {
+  background-color: #732d91;
+}
+
+button:focus {
+  outline: none;
+  background-color: #5e3370;
+}
+
+#timer {
+  font-size: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  background-color: #f5f7fa;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#timer-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+}
+
+#progress-container {
+  width: 100%;
+  background-color: #f5f7fa;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+#progress {
+  height: 5px;
+  background-color: #8e44ad;
+  width: 0%;
+  transition: width 0.5s ease;
+}
+
+/* Media Queries for Android Devices */
+@media (max-width: 480px) {
+  .quiz-header h1 {
+    font-size: 1.25rem;
+  }
+
+  .quiz-content {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  ul li {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  #timer {
+    font-size: 0.9rem;
+  }
+
+  #progress-container {
+    height: 4px;
+  }
+
+  #progress {
+    height: 4px;
+  }
+}
+
+/* Media Queries for small tablets and larger phones (480px to 640px) */
+@media (min-width: 480px) and (max-width: 640px) {
+  .quiz-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .quiz-content {
+    padding: 1.25rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  ul li {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 1.1rem;
+    padding: 0.9rem;
+  }
+
+  #timer {
+    font-size: 1rem;
+  }
+
+  #progress-container {
+    height: 4px;
+  }
+
+  #progress {
+    height: 4px;
+  }
+}
+
+/* Media Queries for small tablets and larger phones - Tailwind's 'sm' size (640px and above) */
+@media (min-width: 640px) {
+  .quiz-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .quiz-content {
+    padding: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  ul li {
+    font-size: 1.1rem;
+  }
+
+  button {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+}
+
+/* For medium-sized tablets and smaller laptops - Tailwind's 'md' size (768px and above) */
+@media (min-width: 768px) {
+  .quiz-header h1 {
+    font-size: 2rem;
+  }
+
+  .quiz-content {
+    padding: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  ul li {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 1.2rem;
+    padding: 1.25rem;
+  }
+}
